@@ -17,6 +17,20 @@ export const MENU_ITEMS: NbMenuItem[] = [
     group: true,
   },
   {
+    title: 'Quản lý người dùng',
+    icon: 'grid-outline',
+    children: [
+      {
+        title: 'Danh sách người dùng',
+        link: '/pages/tables/smart-table',
+      },
+      {
+        title: 'Tree Grid',
+        link: '/pages/tables/tree-grid',
+      },
+    ],
+  },
+  {
     title: 'Layout',
     icon: 'layout-outline',
     children: [
@@ -195,20 +209,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'CKEditor',
         link: '/pages/editors/ckeditor',
-      },
-    ],
-  },
-  {
-    title: 'Tables & Data',
-    icon: 'grid-outline',
-    children: [
-      {
-        title: 'Smart Table',
-        link: '/pages/tables/smart-table',
-      },
-      {
-        title: 'Tree Grid',
-        link: '/pages/tables/tree-grid',
       },
     ],
   },

@@ -11,6 +11,7 @@ import { SmartTableData } from '../../../@core/data/smart-table';
 export class SmartTableComponent {
 
   settings = {
+    // selectMode: 'multi',
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -25,30 +26,55 @@ export class SmartTableComponent {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
     },
+    look: {
+      radioButtonContent: '<i class="nb-trash"></i>',
+      // confirmDelete: true,
+    },
+
     columns: {
+
       id: {
         title: 'ID',
         type: 'number',
       },
-      firstName: {
-        title: 'First Name',
+      hovaten : {
+        title: 'Họ Và Tên',
         type: 'string',
       },
-      lastName: {
-        title: 'Last Name',
+      hinhanh : {
+        title: 'Hình Ảnh',
         type: 'string',
       },
-      username: {
-        title: 'Username',
+      vaitro  : {
+        title: 'Vai Trò',
         type: 'string',
+      },
+      diachi : {
+        title: 'Địa Chỉ',
+        type: 'string',
+      },
+      dienthoai : {
+        title: 'Điện Thoại',
+        type: 'number',
       },
       email: {
         title: 'E-mail',
         type: 'string',
       },
-      age: {
-        title: 'Age',
-        type: 'number',
+      look: {
+        title: 'Khóa',
+        editor: {
+          type: 'list',
+          config: {
+            selectText: 'Select',
+            list: [
+              {value: '1 Ngày', title:'1 Ngày'},
+              {value: '3 Ngày', title:'3 Ngày'},
+              {value: '7 Ngày', title:'7 Ngày'},
+            ],
+          },
+        }
+
       },
     },
   };
