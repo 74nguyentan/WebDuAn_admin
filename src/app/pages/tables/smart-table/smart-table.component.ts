@@ -68,9 +68,11 @@ export class SmartTableComponent {
           config: {
             selectText: 'Select',
             list: [
+
               {value: '1 Ngày', title:'1 Ngày'},
               {value: '3 Ngày', title:'3 Ngày'},
               {value: '7 Ngày', title:'7 Ngày'},
+
             ],
           },
         }
