@@ -1,0 +1,143 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 col-sm-6 pt-4 pb-2" style="background: white;border-radius: 5px; ">
+      <table class="table table-bordered">
+        <tr>
+          <th>Username:</th>
+          <td>TuongXl</td>
+          <td class="anhdd" rowspan="6" colspan="1" >
+            <img src="https://upload.wikimedia.org/wikipedia/vi/archive/f/fe/20201011055543%21MoMo_Logo.png" alt="">
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Mật khẩu:</th>
+          <td>********</td>
+        </tr>
+        <tr>
+          <th scope="row">Họ và tên: </th>
+          <td>Nguyễn Bá Tương</td>
+        </tr>
+        <tr>
+          <th> Ngày sinh:</th>
+          <td>99/99/9999</td>
+        </tr>
+        <tr>
+          <th>Điện thoại:</th>
+          <td>0845220400</td>
+        </tr>
+        <tr>
+          <th>Email:</th>
+          <td>vansong2204@gmail.com</td>
+        </tr>
+        <tr>
+          <th scope="row">Địa chỉ:</th>
+          <td colspan="3"> 86 Nguyễn Sinh Sắc-Hòa Minh-Liên Chiểu-TP Đà Nẵng
+            <p> * Cung cấp địa chỉ sẽ giúp thuận tiện mua bán. Cập nhật địa chỉ ngay khi bạn thay đến địa chỉ mới *</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div style="min-height: 22px;" class="div"><a (click)="isShowFormUser = true" *ngIf="!isShowFormUser" ><i class="fas fa-edit">Chỉnh sửa</i></a></div>
+            <p>*Điều chỉnh thông tin cá nhân*</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div *ngIf="isShowFormUser">
+
+    <div class="row pt-5 pb-1 mb-1" >
+      <div class="tittle-home justify-content-center">
+        Chỉnh sửa thông tin
+      </div>
+      <div class="col tittle-right" ></div>
+      <hr />
+    </div>
+
+    <div class="row" style="background-color: greenyellow; margin-right: -20px;">
+      <div class="col-md-12" style="margin: 0px;padding: 0px;">
+        <div class="container-login100" style="background-color: hotpink;">
+          <div class="wrap-login100  p-r-50  p-b-30 text-center ">
+            <form class="login100-form validate-form pr-5">
+              <span class="login100-form-title p-b-20 ml-5 mt-5" style="font-family: sans-serif">
+
+              </span>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
+                    data-validate="Không được bỏ trống">
+                    <input class="input100" type="text" name="name" placeholder="Họ và tên">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                      <span class="lnr lnr-license"></span>
+                    </span>
+                  </div>
+
+                  <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
+                    data-validate="Password is required">
+                    <input class="input100" type="password" name="pass" placeholder="Mật khẩu">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                      <span class="lnr lnr-lock"></span>
+                    </span>
+                  </div>
+
+                  <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 95%;"
+                    data-validate="Password is required">
+                    <input class="input100" type="password" name="passcheck" placeholder="Nhập lại mật khẩu">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                      <span class="lnr lnr-lock"></span>
+                    </span>
+                  </div>
+
+                </div>
+                <div class="col-md-6">
+                  <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%;"
+                    data-validate="Không được bỏ trống">
+                    <input class="input100" type="text" name="dienthoai" placeholder="Điện thoại">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                      <span class="lnr lnr-phone"></span>
+                    </span>
+                  </div>
+
+                  <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%;"
+                    data-validate="Valid email is required: ex@abc.xyz">
+                    <input class="input100" type="text" name="email" placeholder="Email">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                      <span class="lnr lnr-envelope"></span>
+                    </span>
+                  </div>
+
+                  <div class="wrap-input100 validate-input m-b-18 ml-5" style="width: 97%;"
+                    data-validate="Password is required">
+                    <input class="input100" type="text" name="diachi" placeholder="Địa chỉ">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                      <span class="lnr lnr-map"></span>
+                    </span>
+                  </div>
+
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-9"></div>
+                <div class="col-md-3">
+                  <div class="container-login100-form-btn p-t-22 ml-4">
+                    <button class="login100-form-btn" (click)="isShowFormUser = false" >
+                      hoàn thành
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,19 +1,20 @@
 import { NbMenuItem } from '@nebular/theme';
+import { NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeService } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
-    title: 'E-commerce',
+    title: 'Trang chủ',
+    icon: 'home-outline',
+    link: '/pages/iot-dashboard',
+  },
+  {
+    title: 'Thống kê',
     icon: 'shopping-cart-outline',
     link: '/pages/dashboard',
     home: true,
   },
   {
-    title: 'IoT Dashboard',
-    icon: 'home-outline',
-    link: '/pages/iot-dashboard',
-  },
-  {
-    title: 'FEATURES',
+    title: 'Quản lý',
     group: true,
   },
   {
@@ -27,6 +28,26 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Tree Grid',
         link: '/pages/tables/tree-grid',
+      },
+    ],
+  },
+  {
+    title: 'Quản lý danh mục',
+    icon: 'grid-outline',
+    children: [
+      {
+        title: 'Danh sách danh mục',
+        link: '/pages/type-manager/list-type',
+      },
+    ],
+  },
+  {
+    title: 'Quản lý sản phẩm',
+    icon: 'grid-outline',
+    children: [
+      {
+        title: 'Danh sách sản phẩm',
+        link: '/pages/product-manager/list-product',
       },
     ],
   },
@@ -245,3 +266,4 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
 ];
+

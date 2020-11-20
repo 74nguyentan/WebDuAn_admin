@@ -5,6 +5,8 @@ import { UserData } from '../../../@core/data/users';
 import { LayoutService } from '../../../@core/utils';
 import { map, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'ngx-header',
@@ -38,7 +40,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   currentTheme = 'default';
 
-  userMenu = [ { title: 'Profile' }, { title: 'Log out' } ];
+  userMenu = [ { title: 'Hồ sơ',link: '/pages/admin-impormation',}, { title: 'Đăng xuất',link: '/auth/logout', } ];
+  // ueserMenu = USER_ITEMS;
 
   constructor(private sidebarService: NbSidebarService,
               private menuService: NbMenuService,
@@ -50,6 +53,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.currentTheme = this.themeService.currentTheme;
+
 
     this.userService.getUsers()
       .pipe(takeUntil(this.destroy$))

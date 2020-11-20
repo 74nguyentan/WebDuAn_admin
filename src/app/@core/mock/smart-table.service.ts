@@ -13,7 +13,7 @@ export class SmartTableService extends SmartTableData {
     email: 'mdo@gmail.com',
     dienthoai: '28',
     diachi: '96 nguyen sinh sac Hoa Minh',
-    look: '1,2,3'
+    // look: '1,2,3'
   }, {
     id: 2,
     hovaten: 'Jacob',

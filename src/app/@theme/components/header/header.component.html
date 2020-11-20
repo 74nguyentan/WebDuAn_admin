@@ -6,7 +6,7 @@
     <a class="logo" href="#" (click)="navigateHome()"><span style="font-size: 20px;">GREEN MARKET</span></a>
   </div>
   <nb-select [selected]="currentTheme" (selectedChange)="changeTheme($event)" status="primary">
-    <nb-option *ngFor="let theme of themes" [value]="theme.value"> {{ theme.name }}</nb-option>
+    <nb-option *ngFor="let theme of themes" [value]="theme.value"> Màu sắc: {{ theme.name }}</nb-option>
   </nb-select>
 </div>
 
@@ -23,6 +23,7 @@
                [onlyPicture]="userPictureOnly"
                [name]="user?.name"
                [picture]="user?.picture">
+               <!-- (menuClick)="onMenuClick($even)" -->
       </nb-user>
     </nb-action>
   </nb-actions>

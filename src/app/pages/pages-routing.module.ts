@@ -5,11 +5,16 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
+import { AdminImpormationComponent } from './admin-impormation/admin-impormation.component';
 
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
   children: [
+    {
+      path: 'admin-impormation',
+      component: AdminImpormationComponent,
+    },
     {
       path: 'dashboard',
       component: ECommerceComponent,
@@ -62,6 +67,16 @@ const routes: Routes = [{
       path: 'tables',
       loadChildren: () => import('./tables/tables.module')
         .then(m => m.TablesModule),
+    },
+    {
+      path: 'type-manager',
+      loadChildren: () => import('./type-manager/type-manager.module')
+        .then(m => m.TypeManagerModule),
+    },
+    {
+      path: 'product-manager',
+      loadChildren: () => import('./product-manager/product-manager.module')
+        .then(m => m.ProductManagerModule),
     },
     {
       path: 'miscellaneous',
